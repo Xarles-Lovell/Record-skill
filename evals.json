@@ -1,0 +1,23 @@
+{
+  "skill_name": "Record",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Record一下，把本阶段的事实、知识卡点、反复纠正和3个阶段选题整理进项目根目录唯一的Record.md。未知日期不要猜。",
+      "expected_output": "更新根目录Record.md，包含阶段日期、事实记录、三类有价值事情和3个阶段选题。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我发现Record.md里上周的结果写错了，先告诉我你准备改哪一段，等我确认后再改。",
+      "expected_output": "先指出待修正内容并询问确认，不直接修改。",
+      "files": ["Record.md"]
+    },
+    {
+      "id": 3,
+      "prompt": "根据Record.md给我推荐小红书图文选题，用户指定主题‘我反复纠正AI后形成的协作方法’放在最前面，其余按整个项目和阶段分组。",
+      "expected_output": "用户指定选题排在最前，并按整个项目和阶段分组输出选题。",
+      "files": ["Record.md"]
+    }
+  ]
+}
