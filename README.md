@@ -1,6 +1,6 @@
 # Record skill
 
-Record 是一个用于 Codex 的项目记录 skill。它帮助你在项目开始前、进行中或结束后的任意节点，持续维护项目根目录下唯一的 `Record.md`。
+Record 是一个适用于 Codex、Claude Code、Hermes 及其他支持 Agent Skill 的 AI Agent 的项目记录 skill。它帮助你在项目开始前、进行中或结束后的任意节点，持续维护项目根目录下唯一的 `Record.md`。
 
 它记录的不只是“做了什么”，还会保留项目中值得以后回看的内容：需要 AI 帮忙捋清的知识点、反复确认的问题、经常纠正 AI 的地方，以及反复调整和返工的原因。项目完成后，你可以根据这份记录复盘项目、介绍项目，或整理小红书图文选题和视频大纲。
 
@@ -58,7 +58,7 @@ Record 优先记录下面三类内容。
 
 ### 项目开始前
 
-你可以先在项目根目录建立 `Record.md`，写下项目名称、开始日期和预计阶段。也可以直接告诉 Codex：
+你可以先在项目根目录建立 `Record.md`，写下项目名称、开始日期和预计阶段。也可以直接告诉正在使用的 AI Agent：
 
 ```text
 这个项目我会使用 Record，请先建立项目阶段总览。
@@ -94,7 +94,7 @@ AI 会读取已有的 `Record.md`，整理本次新增事实，判断哪些内�
 
 ## 安装
 
-Record 是一个 Codex skill。使用前需要把本仓库放到你的 Codex skills 目录中。
+Record 是一个通用的 Agent Skill。使用前需要把本仓库放到你正在使用的 AI Agent 的 skills 目录中。
 
 ### 方式一：使用 Git 克隆
 
@@ -104,7 +104,7 @@ Record 是一个 Codex skill。使用前需要把本仓库放到你的 Codex ski
 git clone https://github.com/Xarles-Lovell/Record-skill.git
 ```
 
-然后把得到的 `Record-skill` 文件夹放入 Codex 的 skills 目录，并将文件夹名改成 `Record`（如果你的环境要求 skill 文件夹名与 `name` 一致）。目录结构应类似：
+然后把得到的 `Record-skill` 文件夹放入对应 AI Agent 的 skills 目录，并将文件夹名改成 `Record`（如果你的环境要求 skill 文件夹名与 `name` 一致）。目录结构应类似：
 
 ```text
 skills/
@@ -116,13 +116,13 @@ skills/
         └── Record.md
 ```
 
-不同 Codex 安装方式的 skills 目录位置可能不同。如果你不确定目录在哪里，可以先查看当前环境已有的 skill，找到它们所在的目录，再把 `Record` 放在同一级。
+不同 AI Agent 的 skills 目录位置和加载方式可能不同。如果你不确定目录在哪里，请查看对应 Agent 的 skill 安装说明，找到已有 skill 所在的目录，再把 `Record` 放在同一级。
 
 ### 方式二：下载 ZIP
 
 1. 打开 [Record-skill GitHub 仓库](https://github.com/Xarles-Lovell/Record-skill)。
 2. 点击 `Code`，再点击 `Download ZIP`。
-3. 解压后，将 `Record-skill` 文件夹放到 Codex skills 目录。
+3. 解压后，将 `Record-skill` 文件夹放到对应 AI Agent 的 skills 目录。
 4. 按上面的目录结构确认 `SKILL.md` 位于 skill 文件夹的第一层。
 
 ## 第一次使用
@@ -322,7 +322,13 @@ flowchart TB
 ```
 ````
 
-在 Obsidian 中可以直接预览 Mermaid。也可以使用：
+包含 Mermaid 的 `Record.md` 在支持 Mermaid 的 Markdown 工具中可以直接预览：
+
+- **Obsidian**：打开本地 Markdown 文件即可直接查看；
+- **ima**：打开 Markdown 文件时可以直接看到 Mermaid 图；
+- **Notion**：支持显示 Mermaid，但内容需要放在 Notion 中，不像本地文件那样方便；
+
+也可以使用下面的网页工具查看、修改和导出：
 
 - [Mermaid Live Editor](https://mermaid-live.nodejs.cn/)：功能完整，适合编辑和导出；
 - [jyshare Mermaid 工具](https://www.jyshare.com/front-end/9729/)：主题切换更直接，适合快速查看。
@@ -385,7 +391,7 @@ AI 不会自行补写没有依据的指标、结果、责任边界或用户观�
 
 ### 可以不用 Mermaid 吗？
 
-可以。直接要求使用纯文字即可。默认使用 Mermaid 只是为了方便在 Obsidian 中快速查看阶段关系。
+可以。直接要求使用纯文字即可。默认使用 Mermaid 是为了方便在 Obsidian、ima 等支持 Mermaid 的 Markdown 工具中快速查看阶段关系。Notion 也可以显示 Mermaid，但它依赖在线工作区，管理本地记录时不如本地工具方便。
 
 ### 日期不知道怎么办？
 
@@ -412,7 +418,7 @@ Record 默认不会这样做。项目结束和阶段边界由用户决定，这�
 
 ```text
 Record-skill/
-├── SKILL.md              # Codex 实际读取的 skill 规则
+├── SKILL.md              # AI Agent 实际读取的 skill 规则
 ├── README.md             # 面向公开使用者的说明文档
 ├── evals.json            # 基础测试提示
 └── templates/
