@@ -471,7 +471,28 @@ Record-skill/
 
 ## 许可证
 
-当前仓库尚未指定许可证。若要在其他项目中分发或二次修改，请先确认仓库所有者的授权范围。
+本项目采用 [CC BY 4.0 协议](https://creativecommons.org/licenses/by/4.0/deed.zh-hans) 开放授权。
+
+**这意味着你可以自由地:**
+
+- 个人学习、研究使用
+- 商业项目中使用
+- 修改、二次开发
+- 分享给他人
+
+**只需要做到:**
+
+1. **署名** — 保留作者信息 "Xarles Lovell" 和本仓库链接 `https://github.com/Xarles-Lovell/Record-skill`
+2. **保留许可证声明** — 在你的副本中保留 LICENSE 文件或说明
+3. **标注修改** — 如果你修改了内容,请注明"基于 Xarles Lovell 的 Record-skill 修改"
+
+**友好请求(非强制):**
+
+如果你打算在商业项目中使用 Record-skill,欢迎通过 [GitHub Issue](https://github.com/Xarles-Lovell/Record-skill/issues) 告诉我使用场景,这能帮助我了解 skill 的实际价值,也方便未来改进。这不是必须的,但我会很感激 😊
+
+---
+
+Record.md 不只是项目记录,也可以成为复盘文章、经验分享和 Build in Public 的素材库。无论你是独立开发者、学生、还是团队协作者,都欢迎用它沉淀你的"知识卡点""闪光点"和"有价值的事情"。
 
 ## 开发者日志
 
